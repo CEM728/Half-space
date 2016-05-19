@@ -3,27 +3,22 @@
 \usepackage[cmex10]{amsmath}
 \usepackage{mdwmath}
 \usepackage{mdwtab}
+
 \begin{document}
-  We consider a two-dimensional problem of a magnetic dipole placed along the interface of free-space and lossy dielectric as illustrated in \ref{fig:setup}. The Green's function of the problem can be formulated by first expressing the magnetic line current polarized along the y-axis and located at the interface, $z = 0$:
+
+  We consider the problem of a magnetic line source lying along the interface of a lossy dielectric ($\varepsilon_1$) and free-space ($\varepsilon_0$) as illustrated in \ref{fig:setup}. We invoke the Equivalence Principle to calculate the potential functions and in turn fields, for the y-directed source located at the interface, $z = 0$. The materials are considered non-magnetic ($\mu = 1$) for simplicity, whereas the lossy dielectric is characterized by a complex dielectric constant. We assume for the sake of problem solving, that the magnetic line source lies in freespace and is expressed as:
 
   \begin{equation}
     \overrightarrow{M} = m \delta(x) \delta(z) \mathbf{y}
     \label{Current}
   \end{equation}
 
-  For the given problem, region in the lower half-space, $(z < 0)$ is composed of a lossy dielectric, with complex relative permittivity, $\varepsilon_1 = \varepsilon' - i\varepsilon''$ whereas the upper half-space, $(z > 0)$ is free space. The magnetic vector potential equations in the two regions are given as:
+  The problem solution requires construction of an equivalent model, one for each half-space. According to the Equivalence Principle, the dielectric-freespace interface can be replaced by a Perfectly Conducting Electric (PEC) screen. A surface Magnetic Current, $\mathbf{M_s}$ illustrated in \ref{fig:equivalence.a} is placed on the upper side of the screen and is expressed as:
 
-  \begin{subequations}
-    \begin{equation}
-      (\nabla^2 + k_1^2) F_1 = \delta,
-      \label{eq:potential_lower}
+  \begin{equation}
+    \mathbf{M_s} = - \mathbf{z} \times \mathbf{E}(0) = \mathcal{M}(y) \delta (z) \mathbf(x)
     \end{equation}
-    \begin{equation}
-      \nabla\cdot{\bf H} = 0,
-      \label{eq:potential_upper}
-    \end{equation}
-  \end{subequations}
 
-As I said earlier that this is utter nonsense
-
-\end{document}
+    Where $\mathbf{E}(0)$ is the total electric field at the interface before invoking the Equivalence Principle. The surface magnetic current is placed to satisfy the boundary conditions of the original problem. The corresponding equivalent problem for the upper half-space is shown in \ref{fig:equivalence.b}. The change of the material below the interface must not escape our notice whereas the line source is also retained. Similarly,
+    \ref{fig:equivalence.c} displays the corresponding equivalent of the lower half-space with the absence of the source. The current at the interface is reversed to satisfy the original boundary conditions.
+  \end{document}
