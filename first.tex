@@ -1,35 +1,40 @@
-\documentclass{article}
+\documentclass{IEEEtran}
 % Horizontal Magnetic Dipole over a lossy half-space
 \usepackage[cmex10]{amsmath}
 \usepackage{mdwmath}
 \usepackage{mdwtab}
+% \usepackage{IEEEtrantools}
 
 \begin{document}
 
-We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air. We assume the source to be time-harmonic and y-directed as shown in \ref{fig: illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_a$) exists in the region $z < 0$. For simplicity, we assume that the source lies at a height $z = h$ above the interface, $z = 0$ and is expressed as:
+We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air. We assume the source to be time-harmonic and y-directed as shown in \ref{fig: illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $z < 0$. For simplicity, we assume that the source lies at a height $z = h$ above the interface, $z = 0$ and is expressed as:
 
-\begin{equation}
+\begin{IEEEeqnarray}{rCl}
   \overrightarrow{M} = \mathcal{I}_m \delta(x) \delta(z -h) \mathbf{y}
   \label{Current}
-\end{equation}
+\end{IEEEeqnarray}
 
 where $\mathcal{I}_m$ is the amplitude of the source.
 
 For the two-dimensional problem at hand, we write the scalar Helmholtz equations for the respective media.
-\begin{subequations}
-  \begin{equation}
 
-    \left( \nabla_t^2 + k_0^2 \right) F_y = -\varepsilon_0 \mathcal{I}_m \delta(x) \delta(z -h), z > 0,
-    \label{eq:potential_lower}
+\begin{IEEEeqnarray}{LCL}
+    \left( \nabla_t^2 + k_a^2 \right) F_y^a = -\varepsilon_0 \mathcal{I}_m  \delta(x) \delta(z - h), z > 0 \IEEEyessubnumber*\\
+    \left( \nabla_t^2 + k_b^2 \right) F_y^b = 0,     z <= 0.
+\end{IEEEeqnarray}
 
-  \end{equation}
+where $\nabla_t^2$ is the Laplacian in the transverse direction to the source (zx-plane). In terms of the magnetic vector potential, the electric and magnetic fields are given by:
+\begin{IEEEeqnarray}{rCl}
+  \overrightarrow{E}  = \frac{-1}{\varepsilon} \nabla \times \overrightarrow{F} \IEEEyessubnumber*\\
+  \overrightarrow{H}  = \frac{-j\omega}{k^2} \left( k^2 + \nabla \nabla \cdot \right) \overrightarrow{F}
+\end{IEEEeqnarray}
 
-  \begin{equation}
+The boundary conditions extracted from the continuity of the tangential fields at the interface $z = 0$ are:
 
-    \left( \nabla_t^2 + k_1^2 \right) F_y = 0, z <= 0,
-    \label{eq:potential_lower}
+\begin{IEEEeqnarray}{rCl}
+    \frac{F_y^a}{\varepsilon_0} = \frac{F_y^a}{\varepsilon_0} \IEEEyessubnumber*\\
+    \frac{\partial F_y^a}{\partial y} = \frac{\partial F_y^b}{\partial y}
+\end{IEEEeqnarray}
 
-  \end{equation}
-\end{subequations}
 
   \end{document}
