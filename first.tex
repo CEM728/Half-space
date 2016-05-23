@@ -4,13 +4,20 @@
 \usepackage{mdwmath}
 \usepackage{mdwtab}
 \usepackage{physics} % For using the oridnary derivative nomenclature
+\usepackage{datetime} % Insert date and time
+\usepackage{mathptmx} % Times new Roman
 
+
+% ------------------------------- Useful Tricks Learnt
 % Use ={}& to align subequations to the left
 % Use = for single equations
 
 \begin{document}
-
-  We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air. We assume the source to be time-harmonic and z-directed as shown in \ref{fig:illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $y < 0$. For simplicity, we assume that the source lies at a height $y = h$ above the interface, $y = 0$ and is expressed as:
+  \title{\textsc{Line Source above a Dielectric Half-space}\\}
+  \date{\footnote{Last Modified: \currenttime, \today.}}
+  \maketitle
+\section{Green's Function Derivation}
+  We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air and follow the Stinson's approach . We assume the source to be time-harmonic and z-directed as shown in \ref{fig:illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $y < 0$. For simplicity, we assume that the source lies at a height $y = h$ above the interface, $y = 0$ and is expressed as:
 
   \begin{equation}
     \overrightarrow{M} = \mathcal{I}_m \delta(x) \delta(y -h) \widehat{z}
@@ -104,5 +111,6 @@ The general solutions for the mangetic potentials in the x-space can, therefore 
   \end{align}
 \end{subequations}
 
+\section{Field Computation}
 
 \end{document}
