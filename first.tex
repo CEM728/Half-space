@@ -6,18 +6,45 @@
 \usepackage{physics} % For using the oridnary derivative nomenclature
 \usepackage{datetime} % Insert date and time
 \usepackage{mathptmx} % Times new Roman
-
+\usepackage{filecontents}
 
 % ------------------------------- Useful Tricks Learnt
 % Use ={}& to align subequations to the left
 % Use = for single equations
+
+% ------------------------------ The bibliography
+\begin{filecontents*}{mylib.bib}
+  %  Stinson Book
+  @book{stinson1976intermediate,
+    title={Intermediate mathematics of electromagnetics},
+    author={Stinson, D.C.},
+    lccn={75034206},
+    series={Prentice-Hall electrical engineering series},
+    url={https://books.google.com/books?id=j5YpAQAAMAAJ},
+    year={1976},
+    publisher={Prentice-Hall}
+  }
+
+  % Nevels - Michalski Paper
+  @article{nevels2014behavior,
+    title={On the behavior of surface plasmons at a metallo-dielectric interface},
+    author={Nevels, Robert D and Michalski, Krzysztof A},
+    journal={Journal of Lightwave Technology},
+    volume={32},
+    number={19},
+    pages={3299--3305},
+    year={2014},
+    publisher={IEEE}
+  }
+
+  %
 
 \begin{document}
   \title{\textsc{Line Source above a Dielectric Half-space}\\}
   \date{\footnote{Last Modified: \currenttime, \today.}}
   \maketitle
 \section{Green's Function Derivation}
-  We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air and follow the Stinson's approach . We assume the source to be time-harmonic and z-directed as shown in \ref{fig:illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $y < 0$. For simplicity, we assume that the source lies at a height $y = h$ above the interface, $y = 0$ and is expressed as:
+  We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air and follow the Stinson's approach \cite{stinson1976intermediate}. We assume the source to be time-harmonic and z-directed as shown in \ref{fig:illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $y < 0$. For simplicity, we assume that the source lies at a height $y = h$ above the interface, $y = 0$ and is expressed as:
 
   \begin{equation}
     \overrightarrow{M} = \mathcal{I}_m \delta(x) \delta(y -h) \widehat{z}
