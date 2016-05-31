@@ -1,42 +1,17 @@
 \documentclass{article}
 % Horizontal Magnetic Dipole over a lossy half-space
+\usepackage[utf8]{inputenc} % Use it to include other characters than ABC
 \usepackage[cmex10]{amsmath}
 \usepackage{mdwmath}
 \usepackage{mdwtab}
+\usepackage{hyperref}
 \usepackage{physics} % For using the oridnary derivative nomenclature
 \usepackage{datetime} % Insert date and time
 \usepackage{mathptmx} % Times new Roman
-\usepackage{filecontents}
 
 % ------------------------------- Useful Tricks Learnt
 % Use ={}& to align subequations to the left
 % Use = for single equations
-
-% ------------------------------ The bibliography
-\begin{filecontents*}{mylib.bib}
-  %  Stinson Book
-  @book{stinson1976intermediate,
-    title={Intermediate mathematics of electromagnetics},
-    author={Stinson, D.C.},
-    lccn={75034206},
-    series={Prentice-Hall electrical engineering series},
-    url={https://books.google.com/books?id=j5YpAQAAMAAJ},
-    year={1976},
-    publisher={Prentice-Hall}
-  }
-
-  % Nevels - Michalski Paper
-  @article{nevels2014behavior,
-    title={On the behavior of surface plasmons at a metallo-dielectric interface},
-    author={Nevels, Robert D and Michalski, Krzysztof A},
-    journal={Journal of Lightwave Technology},
-    volume={32},
-    number={19},
-    pages={3299--3305},
-    year={2014},
-    publisher={IEEE}
-  }
-
   %
 
 \begin{document}
@@ -44,7 +19,7 @@
   \date{\footnote{Last Modified: \currenttime, \today.}}
   \maketitle
 \section{Green's Function Derivation}
-  We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air and follow the Stinson's approach \cite{stinson1976intermediate}. We assume the source to be time-harmonic and z-directed as shown in \ref{fig:illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $y < 0$. For simplicity, we assume that the source lies at a height $y = h$ above the interface, $y = 0$ and is expressed as:
+  We consider the problem of a horizontally oriented magnetic line source located above a lossy dielectric half-space in air and follow the Stinson's approach [\cite{stinson1976intermediate, nevels2014behavior}]. We assume the source to be time-harmonic and z-directed as shown in \ref{fig:illustration}. The lossy dielectric characterized by a complex dielctric constant ($\varepsilon_b$) exists in the region $y < 0$. For simplicity, we assume that the source lies at a height $y = h$ above the interface, $y = 0$ and is expressed as:
 
   \begin{equation}
     \overrightarrow{M} = \mathcal{I}_m \delta(x) \delta(y -h) \widehat{z}
@@ -136,8 +111,18 @@ The general solutions for the mangetic potentials in the x-space can, therefore 
     F_z^a ={}& \frac{\mathcal{I}_m}{4 \pi j}\int_{-\infty}^{\infty} \frac{1}{\beta_a} \left[ e^{-j \beta_a |y - h|} + \mathcal{R} e^{-j \beta_a (y + h)} \right] dk_x \\
     F_z^b ={}& \frac{\mathcal{I}_m}{2 \pi j}\int_{-\infty}^{\infty} \frac{1}{\beta_b + \varepsilon_b \beta_a} \left[e^{-j \beta_b y} \right] dk_x
   \end{align}
+  \label{eq:potentials}
 \end{subequations}
 
 \section{Field Computation}
+
+Ever since Sommerfeld first expressed the fields for the problem of a vertical Hertzian dipole above a lossy half-space in terms of Fourier-Bessel Transforms (FBT),[\ref{Sommerfeld}] there has been an enormous interest in similar problems owing to its 
+
+\bibliography{mylib}
+\bibliographystyle{ieeetr}
+
+% \bibliographystyle{IEEEtran}
+% % argument is your BibTeX string definitions and bibliography database(s)
+% \bibliography{mylib}
 
 \end{document}
