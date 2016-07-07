@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.21)  7 JUL 2016 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.21)  7 JUL 2016 18:51
 entering extended mode
 **./multilayer.tex
 (multilayer.tex
@@ -1644,7 +1644,20 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
-) (multilayer.aux)
+) (multilayer.aux
+
+LaTeX Warning: Label `eq:R_up' multiply defined.
+
+
+LaTeX Warning: Label `eq:gamma_down' multiply defined.
+
+
+LaTeX Warning: Label `eq:A0up' multiply defined.
+
+
+LaTeX Warning: Label `eq:B0up' multiply defined.
+
+)
 \openout1 = `multilayer.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -1662,8 +1675,7 @@ LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 23.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box45
@@ -1751,27 +1763,41 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 LaTeX Warning: Citation `kong1990electromagnetic' on page 2 undefined on input 
 line 78.
 
-No file multilayer.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
+
+Overfull \hbox (3.47964pt too wide) detected at line 124
+[] [] \OML/ztmcm/m/it/10 A[]e[] \OMS/ztmcm/m/n/10   [] \OML/ztmcm/m/it/10 B[]e[
+] \OT1/ztmcm/m/n/10 = [] \OML/ztmcm/m/it/10 A[]e[] \OMS/ztmcm/m/n/10   [] \OML/
+ztmcm/m/it/10 B[]e[]
+ []
+
+
+LaTeX Warning: Citation `kong1990electromagnetic' on page 2 undefined on input 
+line 126.
+
+[2] [3] (multilayer.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
  (multilayer.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
 Package rerunfilecheck Info: File `multilayer.out' has not changed.
-(rerunfilecheck)             Checksum: 199599D106AFE30BEDC318ED8E14FB18;64.
+(rerunfilecheck)             Checksum: F6C39DFB71DA86A4429AB6504CE181B4;128.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
  ) 
 Here is how much of TeX's memory you used:
- 14129 strings out of 493335
- 241064 string characters out of 3139257
- 318023 words of memory out of 10000000
- 17510 multiletter control sequences out of 15000+200000
- 47612 words of font info for 101 fonts, out of 3000000 for 9000
+ 14171 strings out of 493335
+ 241589 string characters out of 3139257
+ 320856 words of memory out of 10000000
+ 17525 multiletter control sequences out of 15000+200000
+ 48719 words of font info for 102 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,9n,42p,10432b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
@@ -1785,9 +1811,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on multilayer.pdf (2 pages, 102522 bytes).
+Output written on multilayer.pdf (4 pages, 118863 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
