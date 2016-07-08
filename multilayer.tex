@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 % Horizontal Magnetic Dipole over a lossy half-space
 \usepackage[utf8]{inputenc} % Use it to include other characters than ABC
 \usepackage[cmex10]{amsmath}
@@ -7,7 +7,9 @@
 \usepackage{hyperref}
 \usepackage{physics} % For using the oridnary derivative nomenclature
 \usepackage{datetime} % Insert date and time
-\usepackage{mathptmx} % Times new Roman
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{graphicx}
+% \usepackage{mathptmx} % Times new Roman
 
 % ------------------------------- Useful Tricks Learnt
 % Use ={}& to align subequations to the left
@@ -25,7 +27,15 @@
   \date{\footnote{Last Modified: \currenttime, \today.}}
   \maketitle
 
-  We model the current distribution in a two-dimensional electron gas (2DEG) at a GaN/AlGaN heterostructure with a horizontal magnetic dipole (HMD) embedded in a layered medium as illustrated in \ref{fig:illustration}.
+  We model the current distribution in a two-dimensional electron gas (2DEG) at a GaN/AlGaN heterostructure with a horizontal magnetic dipole (HMD) embedded in a layered medium as illustrated in Fig.\ref{fig:illustration}.
+
+  \begin{figure}[h]
+    \includegraphics[width=12cm]{Gated_2DEG_structure}
+    \centering
+    \caption{Three layer Structure}
+    \label{fig:illustration}
+  \end{figure}
+  
   \section{Green's Function Formulation}
 
   We consider a stratified medium with three layers with the dipole placed at the origin and the layered labeled as $0$ with dielectric constant $\varepsilon_0$, different from the free-space permittivity. We consider two semi-infinite layers, above (Region 1) at $z=d_1$ and below (Region -1) the source layer at $z=d_0$ that extend to infinity. Assuming a TM case, the fields can be described by the electric field longitudinal component, $E_z$,
@@ -75,7 +85,7 @@
     \label{eq:H_rho_BC}
   \end{equation}
 
-  In the region 0, the position of the observation point above or below the source leads to different values of unknowns $A_0$ and $B_0$. To make it distinct, for $z>0$,the unknowns are written as $A^>$ and $B^>$ and for $z<0$, $A^<$ and $B^<$ respectively. For HMD, the following conditions are used [\cite{kong1990electromagnetic}].
+  In the region 0, the position of the observation point above or below the source leads to different values of unknowns $A_0$ and $B_0$. To make it distinct, for $z>0$,the unknowns are written as $A^>$ and $B^>$ and for $z<0$, $A^<$ and $B^<$ respectively. For HMD, the following conditions are used.\cite{kong1990electromagnetic}
 
   \begin{subequations}
     \begin{align}
@@ -123,7 +133,7 @@
     \label{eq:sum}
   \end{equation}
 
-  The unknowns $A_1$ and $B_1$ can be expressed in terms of $A_0^>$ and $B_0^>$ as [\cite{kong1990electromagnetic}]:
+  The unknowns $A_1$ and $B_1$ can be expressed in terms of $A_0^>$ and $B_0^>$ as \cite{kong1990electromagnetic}:
   \begin{equation}
     A_1 e^{jk_{z_1} d_1} = \frac{1}{2} \left[ \frac{\varepsilon_0}{\varepsilon_1} + \frac{k_{z_0}}{k_{z_1}} \right] \times \left[  A_0^> e^{jk_{z_0} d_1} + R^{\uparrow} B_0^> e^{-jk_{z_0} d_1} \right]
     \label{eq:A_1}
@@ -200,11 +210,11 @@
     \label{eq:coefficients}
   \end{subequations}
 
-  Once the electric field is found in region 0 using (\ref{eq:TM_Ez}) and (\ref{eq:coefficients}), fields in other regions can be found using Eqs. (\ref{eq:A_1})-(\ref{eq:B_-1}).
+  Once the electric field in region 0 is found  using (\ref{eq:TM_Ez}) and (\ref{eq:coefficients}), fields in other regions can be found using Eqs. (\ref{eq:A_1})-(\ref{eq:B_-1}).
 
-  \subsection{Ungated Region}
+  \subsection{Gated Region}
 
-  For the ungated region of the three-layer structre, region 1 is characterized by free-space.
+  A perfect electric conductor (PEC) is placed at the interface of region 0 and 1 at $z=d_1$. The Fresnel reflection coefficient (\ref{eq:R_up}) reduces to $-1$ in this case.
 
 
 
